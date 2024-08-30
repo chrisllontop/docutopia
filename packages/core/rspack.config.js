@@ -1,4 +1,4 @@
-import {sveltePreprocess} from "svelte-preprocess";
+import { sveltePreprocess } from "svelte-preprocess";
 import { defineConfig } from "@rspack/cli";
 
 export default defineConfig({
@@ -6,7 +6,7 @@ export default defineConfig({
 		docutopia: "./src/index.ts",
 	},
 	output: {
-		path: './dist',
+		path: "./dist",
 		filename: "[name].js",
 		libraryTarget: "umd",
 	},
@@ -33,7 +33,7 @@ export default defineConfig({
 	resolve: {
 		extensions: [".ts", ".js", ".svelte"],
 		alias: {
-			'@': './src',
+			"@": "./src",
 		},
 		mainFields: ["svelte", "browser", "module", "main"],
 	},

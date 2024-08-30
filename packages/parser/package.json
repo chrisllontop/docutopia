@@ -1,0 +1,34 @@
+{
+	"name": "@docutopia/parser",
+	"description": "",
+	"version": "0.1.0",
+	"author": "Christian Llontop",
+	"license": "MIT",
+	"keywords": [],
+	"type": "module",
+	"main": "./dist/index.cjs.js",
+	"module": "./dist/index.esm.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": "./dist/index.esm.js",
+			"require": "./dist/index.cjs.js"
+		}
+	},
+	"bin": {
+		"docuparser": "./dist/cli.js"
+	},
+	"scripts": {
+		"build": "rspack build",
+		"lint": "biome format",
+		"lint:fix": "biome format --write"
+	},
+	"files": ["dist/"],
+	"devDependencies": {
+		"@biomejs/biome": "catalog:",
+		"@rspack/cli": "catalog:",
+		"@rspack/core": "catalog:",
+		"ts-loader": "catalog:",
+		"typescript": "catalog:"
+	}
+}
