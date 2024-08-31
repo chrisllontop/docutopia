@@ -28,7 +28,12 @@
 		"@biomejs/biome": "catalog:",
 		"@rspack/cli": "catalog:",
 		"@rspack/core": "catalog:",
+		"@types/js-yaml": "^4.0.9",
+		"@types/node": "^22.5.1",
 		"ts-loader": "catalog:",
 		"typescript": "catalog:"
+	},
+	"dependencies": {
+		"js-yaml": "^4.1.0"
 	}
 }
