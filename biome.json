@@ -16,7 +16,22 @@
 				"rules": {
 					"style": {
 						"useConst": "off",
-						"useImportType": "off"
+						"useImportType": "off",
+						"noUselessElse": "off"
+					}
+				}
+			}
+		},
+		{
+			"include": ["*.ts", "*.tsx", "*.js", "*.jsx", "*.mjs", "*.cjs", "*.json"],
+			"linter": {
+				"rules": {
+					"style": {
+						"noUselessElse": "off",
+						"useNodejsImportProtocol": "off"
+					},
+					"complexity": {
+						"noThisInStatic": "off"
 					}
 				}
 			}
