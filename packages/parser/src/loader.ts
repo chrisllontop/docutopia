@@ -1,16 +1,17 @@
 import { readFileSync } from "fs";
 import { extname } from "path";
 import * as yaml from "js-yaml";
+import type {OpenAPISpec} from "@/types/openapi";
 
-export class OpenApiLoader {
-	private static instance: OpenApiLoader;
-	private source: string;
+export class SpecsLoader {
+	private static instance: SpecsLoader;
+	private readonly source: string;
 
 	private constructor(source: string) {
 		this.source = source;
 	}
 
-	public static getInstance(source: string): OpenApiLoader {
+	public static getInstance(source: string): SpecsLoader {
 		if (!this.instance || this.instance.source !== source) {
 			this.instance = new this(source);
 		}
@@ -51,12 +52,12 @@ export class OpenApiLoader {
 		}
 	}
 
-	private loadFromFile(filePath: string): any {
+	private loadFromFile(filePath: string): OpenAPISpec {
 		const fileExtension = extname(filePath);
 		const fileContent = readFileSync(filePath, "utf-8");
 
 		if (fileExtension === ".yaml" || fileExtension === ".yml") {
-			return yaml.load(fileContent);
+			return <OpenAPISpec>yaml.load(fileContent);
 		} else if (fileExtension === ".json") {
 			return JSON.parse(fileContent);
 		} else {

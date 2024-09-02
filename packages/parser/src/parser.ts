@@ -1,5 +1,5 @@
 import type { OpenAPISpec } from "@/types/openapi";
-import { OpenApiLoader } from "@/loader";
+import { SpecsLoader } from "@/loader";
 import type { OpenAPIParserOutput } from "@/types/output";
 import { OpenAPIParserV3 } from "@/parsers/v3";
 
@@ -13,7 +13,7 @@ export class OpenAPIParser {
 
 	public static async getInstance(source: string): Promise<OpenAPIParser> {
 		if (!this.instance) {
-			const spec = await OpenApiLoader.getInstance(source).loadSpec();
+			const spec = await SpecsLoader.getInstance(source).loadSpec();
 			this.instance = new this(spec);
 		}
 		return this.instance;

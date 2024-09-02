@@ -1,4 +1,4 @@
-import { BaseParser } from "@/base-parser";
+import { BaseParser } from "./base";
 import type { OpenAPIParserOutput } from "@/types/output";
 
 export class OpenAPIParserV3 extends BaseParser {
@@ -59,7 +59,7 @@ export class OpenAPIParserV3 extends BaseParser {
 		return Object.values(groupsMap);
 	}
 
-	public generateSidebar(groups: Array<any>) {
+	private generateSidebar(groups: Array<any>) {
 		return groups.map((group) => ({
 			group: group.group,
 			description: group.description,
