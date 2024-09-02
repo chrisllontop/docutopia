@@ -1,7 +1,7 @@
-import { readFileSync } from "fs";
-import { extname } from "path";
+import { readFileSync } from "node:fs";
+import { extname } from "node:path";
+import type { OpenAPISpec } from "@/types/openapi";
 import * as yaml from "js-yaml";
-import type {OpenAPISpec} from "@/types/openapi";
 
 export class SpecsLoader {
 	private static instance: SpecsLoader;
@@ -12,10 +12,10 @@ export class SpecsLoader {
 	}
 
 	public static getInstance(source: string): SpecsLoader {
-		if (!this.instance || this.instance.source !== source) {
-			this.instance = new this(source);
+		if (!SpecsLoader.instance || SpecsLoader.instance.source !== source) {
+			SpecsLoader.instance = new SpecsLoader(source);
 		}
-		return this.instance;
+		return SpecsLoader.instance;
 	}
 
 	public async loadSpec(): Promise<any> {
