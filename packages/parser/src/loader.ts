@@ -18,7 +18,7 @@ export class SpecsLoader {
 		return SpecsLoader.instance;
 	}
 
-	public async loadSpec(): Promise<any> {
+	public async loadSpec(): Promise<OpenAPISpec> {
 		if (this.isUrl(this.source)) {
 			return this.loadFromUrl(this.source);
 		} else {
