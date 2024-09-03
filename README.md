@@ -32,7 +32,7 @@ Web component that renders API documentation using the simplified output from `@
 - Easy integration as a web component.
 - Supports OpenAPI 3.x specifications.
 
-For more details, see the [`@docutopia/ui`](packages/core/README.md).
+For more details, see the [`@docutopia/ui`](packages/ui/README.md).
 
 ## Contributing
 
