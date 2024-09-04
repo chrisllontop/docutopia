@@ -12,6 +12,7 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"allowSyntheticDefaultImports": true,
+		"declaration": true,
 		"sourceMap": true,
 		"outDir": "./dist",
 		"baseUrl": "./",
