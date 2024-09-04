@@ -31,7 +31,8 @@
 						"useNodejsImportProtocol": "off"
 					},
 					"complexity": {
-						"noThisInStatic": "off"
+						"noThisInStatic": "off",
+						"noStaticOnlyClass": "off"
 					}
 				}
 			}
