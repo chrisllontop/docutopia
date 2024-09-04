@@ -1,4 +1,9 @@
+import { fileURLToPath } from 'url';
+import { dirname, resolve } from 'path';
 import { defineConfig } from "@rspack/cli";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const commonConfig = {
 	entry: {
@@ -16,7 +21,7 @@ const commonConfig = {
 	resolve: {
 		extensions: [".ts", ".js"],
 		alias: {
-			"@": "./src",
+			"@": resolve(__dirname, "src"),
 		},
 	},
 };
