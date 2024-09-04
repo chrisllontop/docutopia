@@ -1,5 +1,5 @@
-import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
 import { defineConfig } from "@rspack/cli";
 
 const __filename = fileURLToPath(import.meta.url);

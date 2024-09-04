@@ -16,6 +16,7 @@
 		}
 	},
 	"scripts": {
+		"build:types": "tsc --project tsconfig.types.json",
 		"build": "rspack build",
 		"lint": "biome format",
 		"lint:fix": "biome format --write"
