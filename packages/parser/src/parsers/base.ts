@@ -1,7 +1,7 @@
-import type {OpenAPISpec} from "@/types/openapi";
-import type {BaseResolver} from "@/resolvers/base";
-import {ResolverFactory} from "@/resolvers/factory";
-import type {DocutopiaParserOutput} from "@/types/output";
+import type { BaseResolver } from "@/resolvers/base";
+import { ResolverFactory } from "@/resolvers/factory";
+import type { OpenAPISpec } from "@/types/openapi";
+import type { DocutopiaParserOutput } from "@/types/output";
 
 export abstract class BaseParser {
 	protected spec: OpenAPISpec;
