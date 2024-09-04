@@ -1,28 +1,18 @@
-import { readFileSync } from "node:fs";
-import { extname } from "node:path";
 import type { OpenAPISpec } from "@/types/openapi";
 import * as yaml from "js-yaml";
 
 export class SpecsLoader {
-	private static instance: SpecsLoader;
 	private readonly source: string;
 
-	private constructor(source: string) {
+	constructor(source: string) {
 		this.source = source;
-	}
-
-	public static getInstance(source: string): SpecsLoader {
-		if (!SpecsLoader.instance || SpecsLoader.instance.source !== source) {
-			SpecsLoader.instance = new SpecsLoader(source);
-		}
-		return SpecsLoader.instance;
 	}
 
 	public async loadSpec(): Promise<OpenAPISpec> {
 		if (this.isUrl(this.source)) {
 			return this.loadFromUrl(this.source);
 		} else {
-			return this.loadFromFile(this.source);
+			throw new Error("Invalid URL provided. Please provide a valid URL.");
 		}
 	}
 
@@ -30,7 +20,7 @@ export class SpecsLoader {
 		return source.startsWith("http://") || source.startsWith("https://");
 	}
 
-	private async loadFromUrl(url: string): Promise<any> {
+	private async loadFromUrl(url: string): Promise<OpenAPISpec> {
 		const response = await fetch(url);
 		if (!response.ok) {
 			throw new Error(`Failed to fetch OpenAPI spec from URL: ${url}`);
@@ -44,25 +34,10 @@ export class SpecsLoader {
 			contentType?.includes("application/x-yaml") ||
 			contentType?.includes("text/yaml")
 		) {
-			return yaml.load(text);
+			return yaml.load(text) as OpenAPISpec;
 		} else {
 			throw new Error(
 				"Unsupported content type. Please provide a valid JSON or YAML URL.",
-			);
-		}
-	}
-
-	private loadFromFile(filePath: string): OpenAPISpec {
-		const fileExtension = extname(filePath);
-		const fileContent = readFileSync(filePath, "utf-8");
-
-		if (fileExtension === ".yaml" || fileExtension === ".yml") {
-			return <OpenAPISpec>yaml.load(fileContent);
-		} else if (fileExtension === ".json") {
-			return JSON.parse(fileContent);
-		} else {
-			throw new Error(
-				"Unsupported file format. Please provide a .json, .yaml, or .yml file.",
 			);
 		}
 	}
