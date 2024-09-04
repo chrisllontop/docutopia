@@ -7,8 +7,7 @@ Docutopia Parser simplifies OpenAPI files, making them easier to use for generat
 ## Key Benefits
 
 - Converts complex OpenAPI specs into a simpler format for UI generation.
-- Use it programmatically or via CLI to process specs.
-- Handles JSON and YAML formats, from local files or URLs.
+- Handles JSON and YAML formats
 - Currently, supports OpenAPI 3.x
 
 ## How to Use
@@ -21,13 +20,7 @@ You can install and use the parser via npm:
 npm install @docutopia/parser
 ```
 
-Alternatively, you can run it directly with npx:
-
-```bash
-npx docutopia parse --file /path/to/openapi.yaml --output /path/to/output.json
-```
-
-### Programmatic Usage
+### Usage
 
 ```javascript
 import { DocutopiaParser } from '@docutopia/parser';
