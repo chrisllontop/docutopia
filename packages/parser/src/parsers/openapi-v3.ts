@@ -1,10 +1,10 @@
-import { BaseParser } from "./base";
-import type { OpenAPIParserOutput } from "@/types/output";
+import type {DocutopiaParserOutput} from "@/types/output";
+import {BaseParser} from "@/parsers/base";
 
 export class OpenAPIParserV3 extends BaseParser {
 	private groups: Array<any> = [];
 
-	public parse(): OpenAPIParserOutput {
+	public parse(): DocutopiaParserOutput {
 		this.groups = this.parseGroups();
 
 		return {

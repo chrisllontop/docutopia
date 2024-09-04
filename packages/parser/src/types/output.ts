@@ -1,4 +1,4 @@
-export interface OpenAPIParserOutput {
+export interface DocutopiaParserOutput {
 	info: {
 		title: string;
 		description: string;
