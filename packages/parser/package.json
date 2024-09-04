@@ -15,9 +15,6 @@
 			"require": "./dist/index.cjs.js"
 		}
 	},
-	"bin": {
-		"docuparser": "./dist/cli.js"
-	},
 	"scripts": {
 		"build": "rspack build",
 		"lint": "biome format",
