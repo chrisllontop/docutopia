@@ -18,7 +18,6 @@ Responsible for transforming complex OpenAPI specs (in JSON or YAML format) into
 #### Key Features:
 - Converts OpenAPI specs into a simpler format.
 - Supports both JSON and YAML formats.
-- Works programmatically or via CLI.
 - Compatible with OpenAPI 3.x.
 
 For more details, see the [`@docutopia/parser`](packages/parser/README.md).
