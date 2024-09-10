@@ -64,6 +64,9 @@ importers:
       js-yaml:
         specifier: ^4.1.0
         version: 4.1.0
+      openapi-types:
+        specifier: ^12.1.3
+        version: 12.1.3
     devDependencies:
       '@biomejs/biome':
         specifier: 'catalog:'
@@ -77,9 +80,39 @@ importers:
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
-      '@types/node':
-        specifier: ^22.5.1
-        version: 22.5.1
+      ts-loader:
+        specifier: 'catalog:'
+        version: 9.5.1(typescript@5.5.4)(webpack@5.94.0)
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
+  packages/ui:
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 'catalog:'
+        version: 1.8.3
+      '@rspack/cli':
+        specifier: 'catalog:'
+        version: 1.0.0(@rspack/core@1.0.0)(@types/express@4.17.21)(webpack@5.94.0)
+      '@rspack/core':
+        specifier: 'catalog:'
+        version: 1.0.0
+      serve:
+        specifier: ^14.2.3
+        version: 14.2.3
+      svelte:
+        specifier: ^4.2.18
+        version: 4.2.19
+      svelte-check:
+        specifier: ^3.8.6
+        version: 3.8.6(svelte@4.2.19)
+      svelte-loader:
+        specifier: ^3.2.3
+        version: 3.2.3(svelte@4.2.19)
+      svelte-preprocess:
+        specifier: ^6.0.2
+        version: 6.0.2(svelte@4.2.19)(typescript@5.5.4)
       ts-loader:
         specifier: 'catalog:'
         version: 9.5.1(typescript@5.5.4)(webpack@5.94.0)
@@ -1281,6 +1314,9 @@ packages:
   open@10.1.0:
     resolution: {integrity: sha512-mnkeQ1qP5Ue2wd+aivTD3NHd/lZ96Lu0jgf0pwktLPtx6cTZiH7tyeGRRHs0zX0rbrahXPnXlUnbeXyaBBuIaw==}
     engines: {node: '>=18'}
+
+  openapi-types@12.1.3:
+    resolution: {integrity: sha512-N4YtSYJqghVu4iek2ZUvcN/0aqH1kRDuNqzcycDxhOUpg7GdvLa2F3DgS6yBNhInhv2r/6I0Flkn7CqL8+nIcw==}
 
   opener@1.5.2:
     resolution: {integrity: sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==}
@@ -3108,6 +3144,8 @@ snapshots:
       define-lazy-prop: 3.0.0
       is-inside-container: 1.0.0
       is-wsl: 3.1.0
+
+  openapi-types@12.1.3: {}
 
   opener@1.5.2: {}
 
