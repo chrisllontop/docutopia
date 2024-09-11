@@ -1,29 +1,3 @@
-export interface OpenAPISpec {
-	openapi: string;
-	info: {
-		title: string;
-		description: string;
-		version: string;
-	};
-	servers: Array<{
-		url: string;
-		description: string;
-	}>;
-	paths: {
-		[path: string]: {
-			[method: string]: {
-				tags?: string[];
-				summary?: string;
-				description?: string;
-				parameters?: any[];
-				requestBody?: any;
-				responses?: any;
-			};
-		};
-	};
-	components?: {
-		schemas?: {
-			[key: string]: any;
-		};
-	};
-}
+import type { OpenAPIV3, OpenAPIV3_1 } from "openapi-types";
+
+export type OpenAPISpec = OpenAPIV3.Document | OpenAPIV3_1.Document;
