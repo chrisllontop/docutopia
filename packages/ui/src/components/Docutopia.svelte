@@ -1,18 +1,67 @@
 <script lang="ts">
-export let name: string | null = "World";
+  import type { SidebarGroup } from "@/types/components";
+  import Nav from "./Nav.svelte";
+  import Sidebar from "./Sidebar.svelte";
+
+  const groups: SidebarGroup[] = [
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PUT",
+          summary: "Update a user by ID",
+        },
+        {
+          path: "/users",
+          method: "DELETE",
+          summary: "Delete a list of users",
+        },
+      ],
+    },
+  ];
 </script>
 
+<main>
+  <Nav>
+    <Sidebar {groups} />
+  </Nav>
+</main>
+
 <style>
-  div {
-    font-family: Arial, sans-serif;
-    padding: 1rem;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
+  :global(*) {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font);
+  }
+  :global(a) {
+    text-decoration: none;
+  }
+  main {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: var(--background-color);
   }
 </style>
-
-<div>
-  <p>Hello, {name}!</p>
-</div>
