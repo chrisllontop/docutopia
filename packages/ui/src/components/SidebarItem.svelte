@@ -1,10 +1,11 @@
 <script lang="ts">
-  import Chevron from "./Chevron.svelte";
+  import Chevron from "./Icon/Chevron.svelte";
   import Method from "./Method.svelte";
 
   export let name: string;
   export let method: "GET" | "POST" | "DELETE" | "PUT" | "PATCH" | undefined =
     undefined;
+  export let path: string = "";
   export let isActive: boolean = false;
   export let isParent: boolean = false;
   export let isParentExpanded: boolean = false;
@@ -35,7 +36,7 @@
       <slot></slot>
     {/if}
   {:else}
-    <a href="#path" class="sidebar-link">
+    <a href={path} class="sidebar-link">
       <span>{name ?? ""}</span>
       <Method type={method} />
     </a>

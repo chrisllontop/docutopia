@@ -23,17 +23,17 @@
       group: "Product Operations",
       endpoints: [
         {
-          path: "/users",
+          path: "",
           method: "POST",
           summary: "Create a list of users",
         },
         {
-          path: "/users/{id}",
+          path: "",
           method: "PUT",
           summary: "Update a user by ID",
         },
         {
-          path: "/users",
+          path: "",
           method: "DELETE",
           summary: "Delete a list of users",
         },
@@ -63,5 +63,6 @@
     height: 100vh;
     overflow-x: hidden;
     background-color: var(--background-color);
+    display: flex;
   }
 </style>

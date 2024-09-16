@@ -3,6 +3,7 @@
 
   export let variant: "primary" | "secondary" = "primary";
   export let icon: ComponentType | null = null;
+  export let iconProps: Record<string, string> | null = null;
   export let fullWidth: boolean = false;
 </script>
 
@@ -14,7 +15,7 @@
 >
   <slot></slot>
   {#if icon}
-    <svelte:component this={icon} />
+    <svelte:component this={icon} {...iconProps} />
   {/if}
 </button>
 
