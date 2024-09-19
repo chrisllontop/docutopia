@@ -9,9 +9,13 @@ type Responses = {
 }
 
 type Parameters = {
+	in: 'path' | 'query' | 'header' | 'cookie'
 	name: string;
 	required: boolean;
 	description?: string;
+	enum: string[];
+	schema: SchemaProperty;
+	allowReserved: boolean;
 }
 
 type Variables = {
@@ -23,6 +27,7 @@ type Variables = {
 
 type EndpointWithoutRequestBody = {
   path: string;
+	deprecated: boolean; 
   method: Exclude<HttpMethod, MethodsWithRequestBody>;
   summary?: string;
   description?: string;
@@ -33,6 +38,7 @@ type EndpointWithoutRequestBody = {
 
 type EndpointWithRequestBody = {
   path: string;
+	deprecated: boolean;
   method: MethodsWithRequestBody; 
   summary?: string;
   description?: string;
@@ -40,16 +46,27 @@ type EndpointWithRequestBody = {
 	variables?: Variables[];
   requestBody: Array<{
 		required: boolean,
-		content:{}
+		content:{
+			mediaTypes: string
+		}
 	}>; 
   responses: Responses[];
 };
 
 type Endpoint = EndpointWithoutRequestBody | EndpointWithRequestBody;
 
+type SchemaPropertyArray = Exclude<SchemaProperty, { type: 'array' }>;
+
 type SchemaProperty = 
   | { name: string; type: 'string'; example: string }
-  | { name: string; type: 'boolean'; example: boolean };
+  | { name: string; type: 'boolean'; example: boolean }
+  | { 
+      name: string; 
+      type: 'array'; 
+      item: SchemaPropertyArray; 
+      example: Array<SchemaPropertyArray['example']>;
+    };
+
 
 export interface DocutopiaParserOutput {
 	info: {
