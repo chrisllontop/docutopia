@@ -52,18 +52,22 @@
     position: fixed;
     background-color: var(--background-color);
     height: calc(100vh - 2.5rem);
-    width: calc(100vw - 5rem);
-    max-width: var(--sidebar-width);
+    width: calc(100vw - 3.75rem);
+    max-width: var(--sidebar-width-mobile);
     top: 1.25rem;
-    left: 50%;
-    transform: translate(-50%, 0);
+    left: 1.8rem;
     -webkit-transition: 0.3s;
     transition: 0.3s;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: left 2.5rem;
+    transform-origin: left 2.5rem;
     box-shadow:
       0 0 0 100vw var(--secondary-color-400),
       0 0 0.93rem -0.18rem var(--secondary-color-300);
     border-radius: 0.31rem;
     z-index: 200;
+    overflow-y: auto;
   }
 
   @media screen and (min-width: 768px) {
@@ -75,7 +79,6 @@
       top: 0;
       left: 0;
       padding: 0;
-      max-width: var(--sidebar-width);
       overflow-x: hidden;
     }
 
@@ -94,7 +97,7 @@
       width: 100%;
       left: 0;
       top: 0;
-      overflow-y: auto;
+      max-width: var(--sidebar-width-desktop);
     }
   }
 </style>

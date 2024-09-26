@@ -41,12 +41,18 @@
 
 <style>
   .sidebar {
-    max-width: var(--sidebar-width);
-    padding: 0.31rem;
+    padding: 0.625rem 2rem;
   }
   .sidebar ul {
     list-style: none;
     margin: 0 0 0.31rem 0;
     padding: 0;
   }
+
+  @media screen and (min-width: 768px) {
+    .sidebar {
+      padding: 0.31rem 2rem;
+    }
+  }
+
 </style>

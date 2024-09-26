@@ -35,7 +35,8 @@ html[data-theme="light"] {
     BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
     Droid Sans, Helvetica Neue, sans-serif;
 
-  --sidebar-width: 17.5rem;
+  --sidebar-width-desktop: 17.5rem;
+  --sidebar-width-mobile: 20.81rem;
 
   --font-weight-medium: 500;
   --font-weight-semi-bold: 600;

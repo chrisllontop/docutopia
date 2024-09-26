@@ -55,7 +55,6 @@
   .sidebar-parent-label {
     width: 100%;
     display: inline-block;
-    padding: 0.18rem 0.31rem 0.18rem 0.31rem;
   }
   .sidebar-parent-label,
   .sidebar-link {
@@ -66,10 +65,14 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
   }
   .sidebar-link {
     justify-content: space-between;
-    padding: 0.18rem 0.31rem 0.18rem 0.93rem;
+    margin-left: 0.93rem;
+  }
+  :global(.sidebar-link > .method) {
+    margin-left: 0.31rem;
   }
   .sidebar-item-active > .sidebar-link,
   .sidebar-item-parent > div:active .sidebar-parent-label {

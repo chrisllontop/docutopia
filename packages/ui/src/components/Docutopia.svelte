@@ -30,15 +30,416 @@
         {
           path: "",
           method: "PUT",
-          summary: "Update a user by ID",
+          summary: "Get a list of events for an organization",
         },
         {
           path: "",
           method: "DELETE",
-          summary: "Delete a list of users",
+          summary: "Get the download URL for the specified package and version",
         },
       ],
     },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    {
+      group: "Product Operations",
+      endpoints: [
+        {
+          path: "",
+          method: "POST",
+          summary: "Create a list of users",
+        },
+        {
+          path: "",
+          method: "PUT",
+          summary: "Get a list of events for an organization",
+        },
+        {
+          path: "",
+          method: "DELETE",
+          summary: "Get the download URL for the specified package and version",
+        },
+      ],
+    },
+    {
+      group: "User Operations",
+      endpoints: [
+        {
+          path: "/users",
+          method: "GET",
+          summary: "Get a list of users",
+        },
+        {
+          path: "/users/{id}",
+          method: "PATCH",
+          summary: "Update a user by ID",
+        },
+      ],
+    },
+    
   ];
 </script>
 

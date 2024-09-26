@@ -12,7 +12,7 @@
   .method {
     text-transform: uppercase;
     white-space: nowrap;
-    width: 2.5rem;
+    min-width: 2.5rem;
     color: var(--color-base-white);
     line-height: 1rem;
     text-align: center;
