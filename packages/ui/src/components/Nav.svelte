@@ -36,7 +36,6 @@
 
 <style>
   .navigation-container {
-    position: relative;
     width: 100vw;
     padding: 0.625rem 1.25rem;
   }
@@ -50,7 +49,7 @@
 
   .navigation {
     position: fixed;
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     height: calc(100vh - 2.5rem);
     width: calc(100vw - 3.75rem);
     max-width: var(--sidebar-width-mobile);

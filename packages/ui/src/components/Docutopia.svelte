@@ -1,7 +1,8 @@
 <script lang="ts">
-  import type { SidebarGroup } from "@/types/components";
+  import type { BodyParam, SidebarGroup } from "@/types/components";
   import Nav from "./Nav.svelte";
   import Sidebar from "./Sidebar.svelte";
+  import MainSection from "./MainSection.svelte";
 
   const groups: SidebarGroup[] = [
     {
@@ -439,14 +440,23 @@
         },
       ],
     },
-    
   ];
+  const bodyParamProps: BodyParam = {
+    properties: [
+      { name: "name", type: "string" },
+      { name: "email", type: "string" },
+      { name: "phone", type: "string" },
+      { name: "address", type: "object" },
+    ],
+    required: ["name", "email", "address"],
+  };
 </script>
 
 <main>
   <Nav>
     <Sidebar {groups} />
   </Nav>
+  <MainSection {bodyParamProps} />
 </main>
 
 <style>
@@ -463,7 +473,21 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     display: flex;
+    flex-direction: column;
+  }
+  :global(.container-flex) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  :global(.space-between) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    main {
+      flex-direction: row;
+    }
   }
 </style>

@@ -6,3 +6,14 @@ export interface SidebarGroup {
     path: string;
   }[];
 }
+
+export interface Param {
+  name: string;
+  type: string;
+  required?: boolean;
+}
+
+export interface BodyParam {
+  properties: Param[];
+  required?: string[];
+}
