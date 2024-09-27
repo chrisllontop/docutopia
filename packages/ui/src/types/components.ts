@@ -9,8 +9,10 @@ export interface SidebarGroup {
 
 export interface Param {
   name: string;
+  description?: string;
   type: string;
-  required?: boolean;
+  required?: string[];
+  properties?: Param[];
 }
 
 export interface BodyParam {

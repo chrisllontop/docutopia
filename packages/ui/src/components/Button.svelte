@@ -23,7 +23,7 @@
   .button {
     all: unset;
     cursor: pointer;
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xm);
     line-height: 1.4;
     font-weight: var(--font-weight-semi-bold);
     white-space: nowrap;

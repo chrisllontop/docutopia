@@ -1,0 +1,68 @@
+<script lang="ts">
+  import type { ComponentType } from "svelte";
+
+  export let icon: ComponentType | null = null;
+</script>
+
+<details>
+  <summary class="space-between">
+    <slot name="header"></slot>
+    {#if icon}
+      <span class="icon container-flex">
+        <svelte:component this={icon} />
+      </span>
+    {/if}
+  </summary>
+  <slot></slot>
+</details>
+
+<style>
+  details {
+    background-color: var(--secondary-background-color);
+    border: 0.0625rem solid var(--secondary-color-200);
+    border-radius: calc(0.31rem * 1.5);
+  }
+  details[open] > summary {
+    border-bottom: 0.0625rem solid var(--secondary-color-200);
+  }
+  summary:focus {
+    border: var(--primary-color-600);
+    border-radius: calc(0.31rem * 1.5);
+    box-shadow:
+      0 0 0 0.0625rem var(--primary-color-600),
+      0 0 0 0.19rem var(--primary-color-700);
+  }
+  details[open] > summary:focus {
+    border-radius: calc(0.31rem * 1.5) calc(0.31rem * 1.5) 0 0;
+  }
+  .icon:hover {
+    background-color: var(--secondary-color-500);
+  }
+  .icon {
+    border-radius: 0.31rem;
+    min-width: 1.37rem;
+    min-height: 1.37rem;
+  }
+  :global(.icon > svg) {
+    width: 0.75rem;
+    height: 0.75rem;
+    transform: rotate(45deg);
+    margin-right: 0 !important;
+  }
+  :global(.icon > svg > path) {
+    stroke: var(--primary-text);
+  }
+  :global(details[open] > summary > .icon > svg) {
+    transform: none;
+  }
+
+  summary {
+    user-select: none;
+    cursor: pointer;
+    height: 1.875rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0.0625rem 0.375rem;
+  }
+</style>

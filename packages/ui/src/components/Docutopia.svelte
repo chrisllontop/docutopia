@@ -443,10 +443,32 @@
   ];
   const bodyParamProps: BodyParam = {
     properties: [
-      { name: "name", type: "string" },
+      {
+        name: "name",
+        type: "string",
+        description:
+          "The environment name. Must be unique within the project.\n\nMust have a length between 1 and 100 characters.",
+      },
       { name: "email", type: "string" },
       { name: "phone", type: "string" },
-      { name: "address", type: "object" },
+      {
+        name: "address",
+        type: "object",
+        properties: [
+          { name: "streetAddress", type: "string" },
+          { name: "locality", type: "string" },
+          { name: "region", type: "string" },
+          { name: "postalCode", type: "string" },
+          { name: "country", type: "string" },
+        ],
+        required: [
+          "streetAddress",
+          "locality",
+          "region",
+          "postalCode",
+          "country",
+        ],
+      },
     ],
     required: ["name", "email", "address"],
   };

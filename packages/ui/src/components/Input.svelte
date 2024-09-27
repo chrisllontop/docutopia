@@ -16,7 +16,7 @@
     min-height: 1.875rem;
     background-color: var(--input-background-color);
     border-radius: 0.31rem;
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xm);
     padding: 0 0.625rem;
     border: 0.0625rem solid var(--input-border-color);
     color: var(--tertiary-color-300);

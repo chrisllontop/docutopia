@@ -60,7 +60,7 @@
   .sidebar-link {
     border-radius: 0.31rem;
     color: var(--tertiary-color-200);
-    font-size: var(--font-size-s);
+    font-size: var(--font-size-xm);
     word-break: break-word;
     display: flex;
     flex-direction: row;
