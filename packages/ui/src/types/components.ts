@@ -8,14 +8,26 @@ export interface SidebarGroup {
 }
 
 export interface Param {
-  name: string;
+  name?: string;
   description?: string;
   type: string;
   required?: string[];
   properties?: Param[];
+  enumOptions?: SelectOptions;
+  oneOf?: Option[];
+  items?: Param;
+}
+
+export interface Option {
+  type: string;
+  properties?: Param[];
+  required?: string[];
 }
 
 export interface BodyParam {
-  properties: Param[];
+  properties?: Param[];
   required?: string[];
+  oneOf?: Option[];
 }
+
+export type SelectOptions = (string | number | boolean)[];

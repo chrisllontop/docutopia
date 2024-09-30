@@ -1,10 +1,14 @@
 <script lang="ts">
   import type { ComponentType } from "svelte";
 
+  export let className: string = "";
+  export let variant: "outlined" | "filled" = "outlined";
+  export let variantRadius: "all" | "none" = "all";
+  export let size: "S" | "M" = "S";
   export let icon: ComponentType | null = null;
 </script>
 
-<details>
+<details class={`${size} ${className} ${variantRadius}-radius ${variant}`}>
   <summary class="space-between">
     <slot name="header"></slot>
     {#if icon}
@@ -20,13 +24,17 @@
   details {
     background-color: var(--secondary-background-color);
     border: 0.0625rem solid var(--secondary-color-200);
+    position: relative;
+    overflow: visible;
+  }
+  details.all-radius {
     border-radius: calc(0.31rem * 1.5);
   }
   details[open] > summary {
     border-bottom: 0.0625rem solid var(--secondary-color-200);
   }
   summary:focus {
-    border: var(--primary-color-600);
+    border-color: var(--primary-color-600);
     border-radius: calc(0.31rem * 1.5);
     box-shadow:
       0 0 0 0.0625rem var(--primary-color-600),
@@ -34,6 +42,9 @@
   }
   details[open] > summary:focus {
     border-radius: calc(0.31rem * 1.5) calc(0.31rem * 1.5) 0 0;
+  }
+  details.filled {
+    background-color: var(--tertiary-color-50);
   }
   .icon:hover {
     background-color: var(--secondary-color-500);
@@ -56,6 +67,12 @@
     transform: none;
   }
 
+  .S > summary {
+    padding: 0.0625rem 0.375rem;
+  }
+  .M > summary {
+    padding: 1.25rem 0.625rem;
+  }
   summary {
     user-select: none;
     cursor: pointer;
@@ -63,6 +80,6 @@
     list-style: none;
     display: flex;
     align-items: center;
-    padding: 0.0625rem 0.375rem;
+    outline: none;
   }
 </style>

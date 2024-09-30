@@ -1,11 +1,12 @@
 <script lang="ts">
-  import type { Param as ParamType } from "@/types/components";
+  import type { BodyParam } from "@/types/components";
 
   import Card from "./Card.svelte";
-  import Param from "./Param.svelte";
-  import ExpandParam from "./ExpandParam.svelte";
-  export let properties: ParamType[];
-  export let required: string[] = [];
+  import ContainerParam from "./ContainerParam.svelte";
+  import OptionParam from "./OptionParam.svelte";
+  export let oneOf: BodyParam["oneOf"] = [];
+  export let properties: BodyParam["properties"] = [];
+  export let required: BodyParam["required"] = [];
 </script>
 
 {#if properties?.length}
@@ -13,20 +14,11 @@
     <Card>
       <form>
         {#each properties as property (property.name)}
-          <Param
-            isRequired={required?.length
-              ? required.indexOf(property.name) !== -1
-              : false}
-            hasProperties={property?.properties &&
-              property.properties.length >= 0}
-            {...property}
-          >
-            {#if property?.properties?.length}
-              <ExpandParam {...property} />
-            {/if}
-          </Param>
+          <ContainerParam {property} {required} />
         {/each}
       </form>
     </Card>
   </div>
+{:else if oneOf?.length}
+  <OptionParam {oneOf} />
 {/if}

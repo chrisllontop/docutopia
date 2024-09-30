@@ -40,4 +40,7 @@
     box-shadow: 0 0 0 0.19rem var(--danger-color-200);
     -webkit-box-shadow: 0 0 0 0.19rem var(--danger-color-200);
   }
+  .input:not(:focus):hover {
+    border-color: var(--input-hover-border-color);
+  }
 </style>

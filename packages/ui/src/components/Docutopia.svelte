@@ -448,6 +448,7 @@
         type: "string",
         description:
           "The environment name. Must be unique within the project.\n\nMust have a length between 1 and 100 characters.",
+        enumOptions: ["test1", "test2", "test3", "test4"],
       },
       { name: "email", type: "string" },
       { name: "phone", type: "string" },
@@ -461,16 +462,90 @@
           { name: "postalCode", type: "string" },
           { name: "country", type: "string" },
         ],
-        required: [
-          "streetAddress",
-          "locality",
-          "region",
-          "postalCode",
-          "country",
-        ],
+        required: ["locality", "region", "postalCode", "country"],
+      },
+      {
+        name: "test",
+        type: "array",
+        items: {
+          type: "string",
+          enumOptions: ["test1", "test2"],
+        },
+        description: "Some description",
       },
     ],
     required: ["name", "email", "address"],
+  };
+
+  const bodyParamProps2: BodyParam = {
+    oneOf: [
+      {
+        type: "object",
+        properties: [
+          {
+            name: "type",
+            description: "The integration type.",
+            type: "string",
+            enumOptions: ["test1", "test2", "test3"],
+          },
+          {
+            name: "type2",
+            description: "The integration type.",
+            type: "string",
+            enumOptions: ["test4", "test5"],
+          },
+        ],
+        required: ["type", "type2"],
+      },
+      {
+        type: "object",
+        properties: [
+          {
+            name: "type",
+            description: "The integration type.",
+            type: "string",
+            enumOptions: ["test1", "test2", "test3"],
+          },
+          {
+            name: "type2",
+            description: "The integration type.",
+            type: "string",
+            enumOptions: ["test4", "test5"],
+          },
+        ],
+        required: ["type", "type2"],
+      },
+      {
+        type: "object",
+        properties: [
+          {
+            name: "type",
+            description: "The integration type.",
+            type: "string",
+            enumOptions: ["test1", "test2", "test3"],
+          },
+          {
+            name: "type2",
+            description: "The integration type.",
+            type: "string",
+            enumOptions: ["test4", "test5"],
+          },
+          {
+            name: "address",
+            type: "object",
+            properties: [
+              { name: "streetAddress", type: "string" },
+              { name: "locality", type: "string" },
+              { name: "region", type: "string" },
+              { name: "postalCode", type: "string" },
+              { name: "country", type: "string" },
+            ],
+            required: ["locality", "region", "postalCode", "country"],
+          },
+        ],
+        required: ["type", "type2"],
+      },
+    ],
   };
 </script>
 
@@ -478,7 +553,12 @@
   <Nav>
     <Sidebar {groups} />
   </Nav>
-  <MainSection {bodyParamProps} />
+
+  <article>
+    <MainSection {bodyParamProps} />
+
+    <MainSection bodyParamProps={bodyParamProps2} />
+  </article>
 </main>
 
 <style>
@@ -499,6 +579,14 @@
     display: flex;
     flex-direction: column;
   }
+  article {
+    display: grid;
+    gap: 1.5rem;
+    height: fit-content;
+    width: 100%;
+    padding: 1.87rem 1.94rem;
+    max-width: 50rem;
+  }
   :global(.container-flex) {
     display: flex;
     align-items: center;
@@ -510,6 +598,9 @@
   @media screen and (min-width: 768px) {
     main {
       flex-direction: row;
+    }
+    article {
+      margin-left: var(--sidebar-width-desktop);
     }
   }
 </style>

@@ -1,11 +1,16 @@
 <script lang="ts">
-  import Input from "./Input.svelte";
+  import type { Param as ParamType } from "@/types/components";
+  import ParamField from "./ParamField.svelte";
 
-  export let name;
+  export let name = "";
   export let type;
   export let description = "";
-  export let hasProperties: boolean = false;
-  export let isRequired: boolean = false;
+  export let required: ParamType["required"] = [];
+  export let enumOptions: ParamType["enumOptions"] = [];
+  export let properties: ParamType["properties"] = [];
+  export let items: ParamType["items"] | undefined = undefined;
+
+  const isRequiredParam = required?.indexOf(name) !== -1;
 </script>
 
 {#if name && type}
@@ -15,7 +20,7 @@
         <div class="param-header">
           <label class="param-name" for={name}>{name}</label>
           <span class="param-type">{type}</span>
-          {#if isRequired}
+          {#if isRequiredParam}
             <span class="param-required">required</span>
           {/if}
         </div>
@@ -26,14 +31,11 @@
         {/if}
       </div>
 
-      {#if !hasProperties}
-        <div class="param-form">
-          <Input id={name} required={isRequired} />
-        </div>
-      {/if}
+      <ParamField
+        param={{ required, type, name, properties, items, enumOptions }}
+        {isRequiredParam}
+      />
     </div>
-
-    <slot></slot>
   </div>
 {/if}
 
@@ -41,6 +43,10 @@
   .param {
     padding: 0.625rem;
     text-transform: lowercase;
+  }
+  .param:has(.field-object, .field-array) > div {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .param:not(:last-child) {
     border-bottom: 0.0625rem solid var(--secondary-color-200);
@@ -61,11 +67,6 @@
   .param-schema {
     line-height: 1.81rem;
     min-height: 1.87rem;
-  }
-  .param-form {
-    width: var(--param-form-width);
-    min-width: var(--param-form-width);
-    margin-left: 0.625rem;
   }
   .param-description > p {
     font-size: var(--font-size-s);
