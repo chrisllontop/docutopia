@@ -1,0 +1,152 @@
+html[data-theme="light"] {
+  --primary-color-100: #422c96;
+  --primary-color-200: rgba(75, 50, 170, 0.09);
+  --primary-color-600: #018ef5;
+  --primary-color-700: rgba(1, 142, 245, 0.25);
+
+  --secondary-color-50: rgba(255, 255, 255, 0.2);
+  --secondary-color-100: rgba(0, 0, 0, 0);
+  --secondary-color-200: rgba(0, 0, 0, 0.1);
+  --secondary-color-300: rgba(0, 0, 0, 0.33);
+  --secondary-color-400: rgba(0, 0, 0, 0.125);
+  --secondary-color-500: rgba(0, 0, 0, 0.05);
+  --secondary-color-600: rgba(0, 0, 0, 0.2);
+
+  --tertiary-color-50: #f8f8f8;
+  --tertiary-color-100: #e5e5e5;
+  --tertiary-color-200: #4f5a66;
+  --tertiary-color-300: #384248;
+  --tertiary-color-400: #637288;
+  --tertiary-color-500: rgba(255, 255, 255, 0.1);
+
+  --danger-color-50: rgba(233, 95, 106, 0.1);
+  --danger-color-100: #e95f6a;
+  --danger-color-200: rgba(233, 95, 106, 0.4);
+  --danger-color-300: #dd1e2e;
+  --danger-color-400: #c71b29;
+  --danger-color-500: #b91926;
+
+  --color-base-white: #ffffff;
+
+  --primary-text: #121212;
+  --primary-background-color: var(--color-base-white);
+  --secondary-background-color: var(--color-base-white);
+  --sidebar-item-selected-color: var(--primary-color-100);
+  --card-box-shadow: inset 0 0.0625rem 0.0625rem var(--tertiary-color-500);
+
+  --input-background-color: var(--color-base-white);
+  --input-border-color: var(--tertiary-color-100);
+  --input-hover-border-color: #ccc;
+
+  --primary-color-method-get: #0e9b71;
+  --secondary-color-method-get: #0d8d67;
+
+  --primary-color-method-post: #0171c2;
+  --secondary-color-method-post: #0168b3;
+
+  --primary-color-method-delete: var(--danger-color-400);
+  --secondary-color-method-delete: var(--danger-color-500);
+
+  --primary-color-method-put: #674ead;
+  --secondary-color-method-put: #604aa2;
+
+  --primary-color-method-patch: #df7d03;
+  --secondary-color-method-patch: #d07503;
+
+  --required-color: var(--danger-color-300);
+
+  --primary-font: Twemoji Country Flags, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+
+  --sidebar-width-desktop: 17.5rem;
+  --sidebar-width-mobile: 20.81rem;
+  --param-form-width: 8.75rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-xxs: 0.5rem;
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.81rem;
+  --font-size-xm: 0.875rem;
+
+  --select-chevron: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.625 5L8.60711 1.25L4.58923 5' stroke='rgba(0,0,0,.25)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.58923 10L8.60711 13.75L12.625 10' stroke='rgba(0,0,0,.25)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+html[data-theme="dark"] {
+  --primary-color-100: #422c96;
+  --primary-color-200: rgba(75, 50, 170, 0.09);
+  --primary-color-600: #018ef5;
+  --primary-color-700: rgba(1, 142, 245, 0.25);
+
+  --secondary-color-50: rgba(255, 255, 255, 0.2);
+  --secondary-color-100: rgba(0, 0, 0, 0);
+  --secondary-color-200: rgba(255, 255, 255, 0.1);
+  --secondary-color-300: rgba(0, 0, 0, 0.33);
+  --secondary-color-400: rgba(0, 0, 0, 0.125);
+  --secondary-color-500: rgba(255, 255, 255, 0.05);
+  --secondary-color-600: rgba(0, 0, 0, 0.2);
+
+  --tertiary-color-50: #303b42;
+  --tertiary-color-100: #e5e5e5;
+  --tertiary-color-200: var(--color-base-white);
+  --tertiary-color-300: var(--color-base-white);
+  --tertiary-color-400: #adb4c1;
+  --tertiary-color-500: rgba(255, 255, 255, 0.1);
+
+  --danger-color-50: rgba(233, 95, 106, 0.1);
+  --danger-color-100: #e95f6a;
+  --danger-color-200: rgba(233, 95, 106, 0.4);
+  --danger-color-300: #dd1e2e;
+  --danger-color-400: #c71b29;
+  --danger-color-500: #b91926;
+
+  --color-base-white: #ffffff;
+
+  --primary-text: var(--color-base-white);
+  --primary-background-color: #121212;
+  --secondary-background-color: #242e34;
+  --sidebar-item-selected-color: var(--color-base-white);
+  --card-box-shadow: none;
+
+  --input-background-color: #384248;
+  --input-border-color: #4c555a;
+  --input-hover-border-color: #60686d;
+
+  --primary-color-method-get: #0e9b71;
+  --secondary-color-method-get: #0d8d67;
+
+  --primary-color-method-post: #0171c2;
+  --secondary-color-method-post: #0168b3;
+
+  --primary-color-method-delete: var(--danger-color-400);
+  --secondary-color-method-delete: var(--danger-color-500);
+
+  --primary-color-method-put: #674ead;
+  --secondary-color-method-put: #604aa2;
+
+  --primary-color-method-patch: #df7d03;
+  --secondary-color-method-patch: #d07503;
+
+  --required-color: var(--danger-color-100);
+
+  --primary-font: Twemoji Country Flags, system-ui, -apple-system,
+    BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+
+  --sidebar-width-desktop: 17.5rem;
+  --sidebar-width-mobile: 20.81rem;
+  --param-form-width: 8.75rem;
+
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  --font-size-xxs: 0.5rem;
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.81rem;
+  --font-size-xm: 0.875rem;
+  --select-chevron: url("data:image/svg+xml,%3Csvg width='17' height='15' viewBox='0 0 17 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.625 5L8.60711 1.25L4.58923 5' stroke='rgba(255,255,255,.25)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M4.58923 10L8.60711 13.75L12.625 10' stroke='rgba(255,255,255,.25)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
