@@ -6,19 +6,29 @@
   export let variantRadius: "all" | "none" = "all";
   export let size: "S" | "M" = "S";
   export let icon: ComponentType | null = null;
+  export let showSlotOnly: boolean = false;
+  export let open: boolean = false;
 </script>
 
-<details class={`${size} ${className} ${variantRadius}-radius ${variant}`}>
-  <summary class="space-between">
-    <slot name="header"></slot>
-    {#if icon}
-      <span class="icon container-flex">
-        <svelte:component this={icon} />
-      </span>
-    {/if}
-  </summary>
+{#if !showSlotOnly}
+  <details
+    class={`${size} ${className} ${variantRadius}-radius ${variant}`}
+    {open}
+  >
+    <summary class="space-between">
+      <slot name="header"></slot>
+      {#if icon}
+        <span class="icon container-flex">
+          <svelte:component this={icon} />
+        </span>
+      {/if}
+    </summary>
+
+    <slot></slot>
+  </details>
+{:else}
   <slot></slot>
-</details>
+{/if}
 
 <style>
   details {

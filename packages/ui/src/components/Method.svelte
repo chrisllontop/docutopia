@@ -19,6 +19,11 @@
     height: 1rem;
     font-size: var(--font-size-xxs);
     border-radius: calc(0.31rem * 1.5);
+    box-shadow:
+      inset 0 0.0625rem 0.0625rem 0 var(--secondary-color-50),
+      inset 0 -0.0625rem 0.125rem 0 var(--secondary-color-600),
+      0 0.0625rem 0.125rem 0 var(--secondary-color-500);
+    font-weight: var(--font-weight-semi-bold);
   }
   .method-get {
     background-color: var(--primary-color-method-get);

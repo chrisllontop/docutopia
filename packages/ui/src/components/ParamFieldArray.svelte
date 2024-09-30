@@ -5,13 +5,16 @@
   import Close from "./Icon/Close.svelte";
   import Details from "./Details.svelte";
   import ParamField from "./ParamField.svelte";
+  import Trash from "./Icon/Trash.svelte";
 
-  export let type: ParamType["type"] = "";
   export let items: ParamType["items"] | undefined = undefined;
 
   let totalItems = 0;
   const handleAddNewItem = () => {
     totalItems += 1;
+  };
+  const handleDeleteCurrentItem = () => {
+    totalItems -= 1;
   };
 </script>
 
@@ -19,11 +22,21 @@
   <div class="field-array">
     {#if totalItems >= 0}
       {#each Array(totalItems) as _, index (index)}
-        <Details icon={Close}>
-          <span class="header" slot="header">{items?.type}</span>
+        <Details icon={Close} open>
+          <div class="header container-flex space-between" slot="header">
+            <span>{items?.type}</span>
+            <Button
+              type="button"
+              size="xs"
+              variant="icon"
+              color="danger"
+              on:click={handleDeleteCurrentItem}
+              icon={Trash}
+            />
+          </div>
 
           <div class="field-container">
-            <ParamField param={items} />
+            <ParamField isArrayFieldChild param={items} />
           </div>
         </Details>
       {/each}
@@ -36,7 +49,8 @@
       uppercase
       icon={Close}
       on:click={handleAddNewItem}
-      className="add-button">{`add ${type}`}</Button
+      size="xs"
+      className="add-button">{`add ${items?.type}`}</Button
     >
   </div>
 {/if}
@@ -48,6 +62,7 @@
     gap: 0.625rem;
   }
   .header {
+    width: 100%;
     text-transform: uppercase;
     font-size: var(--font-size-xs);
     font-weight: var(--font-weight-semi-bold);
@@ -57,10 +72,10 @@
     min-width: 100% !important;
     margin-left: 0 !important;
   }
-  .field-container {
+  .field-container:not(:has(.field-object)) {
     padding: 0.625rem;
   }
-  :global(.add-button > svg) {
+  :global(.add-button svg) {
     transform: rotate(45deg);
   }
 </style>

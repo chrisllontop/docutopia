@@ -473,6 +473,23 @@
         },
         description: "Some description",
       },
+      {
+        name: "test2",
+        type: "array",
+        items: {
+          name: "address",
+          type: "object",
+          properties: [
+            { name: "streetAddress", type: "string" },
+            { name: "locality", type: "string" },
+            { name: "region", type: "string" },
+            { name: "postalCode", type: "string" },
+            { name: "country", type: "string" },
+          ],
+          required: ["locality", "region", "postalCode", "country"],
+        },
+        description: "Some description",
+      },
     ],
     required: ["name", "email", "address"],
   };

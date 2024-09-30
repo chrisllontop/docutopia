@@ -1,16 +1,9 @@
 <script lang="ts">
-  import type { Param as ParamType } from "@/types/components";
-  import ParamField from "./ParamField.svelte";
-
   export let name = "";
   export let type;
   export let description = "";
-  export let required: ParamType["required"] = [];
-  export let enumOptions: ParamType["enumOptions"] = [];
-  export let properties: ParamType["properties"] = [];
-  export let items: ParamType["items"] | undefined = undefined;
 
-  const isRequiredParam = required?.indexOf(name) !== -1;
+  export let isRequiredParam: boolean = false;
 </script>
 
 {#if name && type}
@@ -31,10 +24,7 @@
         {/if}
       </div>
 
-      <ParamField
-        param={{ required, type, name, properties, items, enumOptions }}
-        {isRequiredParam}
-      />
+      <slot></slot>
     </div>
   </div>
 {/if}

@@ -7,11 +7,12 @@
   export let type: ParamType["type"];
   export let properties: ParamType["properties"] = [];
   export let required: ParamType["required"] = [];
+  export let isArrayFieldChild: boolean = false;
 </script>
 
 {#if properties?.length}
   <div class="field-object">
-    <Details icon={Close}>
+    <Details icon={Close} showSlotOnly={isArrayFieldChild}>
       <span slot="header" class="title">{`${name} ${type}`}</span>
 
       {#each properties as property (property.name)}

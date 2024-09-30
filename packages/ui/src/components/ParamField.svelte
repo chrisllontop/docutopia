@@ -7,7 +7,7 @@
 
   export let param: ParamType;
   const { type, name, required, enumOptions, properties, items } = param;
-
+  export let isArrayFieldChild: boolean = false;
   export let isRequiredParam: boolean = false;
 
   const isObjectType =
@@ -17,9 +17,15 @@
 
 <div class:mt-10={isArrayType || isObjectType}>
   {#if isObjectType}
-    <ParamFieldObject {required} {type} {name} {properties} />
+    <ParamFieldObject
+      {isArrayFieldChild}
+      {required}
+      {type}
+      {name}
+      {properties}
+    />
   {:else if isArrayType}
-    <ParamFieldArray {type} {items} />
+    <ParamFieldArray {items} />
   {:else}
     <ParamFieldStringOrNumber {name} {isRequiredParam} {enumOptions} />
   {/if}
