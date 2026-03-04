@@ -7,6 +7,7 @@ export interface DocutopiaRenderConfig {
 	specUrl?: string;
 	spec?: OpenApiDocument;
 	baseUrl: string;
+	basePath?: string;
 }
 
 /**

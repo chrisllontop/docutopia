@@ -49,6 +49,16 @@ function App() {
 export default App;
 ```
 
+#### With a base path
+
+```jsx
+<Docutopia
+  specUrl="/docs/openapi.json"
+  baseUrl="https://api.example.com"
+  basePath="/docs"
+/>
+```
+
 ### Browser (IIFE)
 
 For projects without a build system, use the standalone browser bundle via CDN.
@@ -80,6 +90,7 @@ Renders the documentation to a DOM element.
 - **config** (`object`):
   - `specUrl` (`string`): URL to your OpenAPI specification
   - `baseUrl` (`string`): Base URL for API requests
+  - `basePath` (`string`, optional): Path prefix for nested routing (e.g., `"/docs"`)
 
 ## Props
 
@@ -92,6 +103,11 @@ Renders the documentation to a DOM element.
 
 - **Type:** `string`
 - **Description:** Base URL for API requests. If not provided, uses the server URL from the OpenAPI spec
+
+### `basePath` (optional)
+
+- **Type:** `string`
+- **Description:** Path prefix for nested routing. Use when Docutopia is mounted under a sub-path (e.g., `/docs`). All internal links and routes will be prefixed with this path.
 
 ## License
 
