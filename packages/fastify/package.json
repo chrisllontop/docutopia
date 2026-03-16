@@ -50,6 +50,7 @@
 		"@types/node": "^25.5.0",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
+		"fastify": "^5.8.2",
 		"typescript": "^5.9.3",
 		"vite": "^8.0.0",
 		"vite-plugin-dts": "^4.5.4"
