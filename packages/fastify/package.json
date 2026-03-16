@@ -18,7 +18,9 @@
 			"require": "./dist/index.js"
 		}
 	},
-	"files": ["dist/**/*"],
+	"files": [
+		"dist/**/*"
+	],
 	"keywords": [
 		"fastify",
 		"fastify-plugin",
@@ -34,22 +36,22 @@
 	},
 	"dependencies": {
 		"@docutopia/react": "workspace:*",
-		"@fastify/swagger": "^9.3.0",
-		"fastify-plugin": "^5.0.1",
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0",
-		"react-router-dom": "^6.28.0"
+		"@fastify/swagger": "^9.7.0",
+		"fastify-plugin": "^5.1.0",
+		"react": "^19.2.4",
+		"react-dom": "^19.2.4",
+		"react-router-dom": "^7.13.1"
 	},
 	"peerDependencies": {
 		"fastify": "^5.0.0"
 	},
 	"devDependencies": {
 		"@fastify/swagger": "^9.3.0",
-		"@types/node": "^22.10.3",
-		"@types/react": "^19.0.0",
-		"@types/react-dom": "^19.0.0",
-		"typescript": "^5.7.2",
-		"vite": "^7.1.11",
+		"@types/node": "^25.5.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"typescript": "^5.9.3",
+		"vite": "^8.0.0",
 		"vite-plugin-dts": "^4.5.4"
 	},
 	"license": "MIT",
