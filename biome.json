@@ -16,7 +16,8 @@
 			"!**/.astro",
 			"!**/*.astro",
 			"!**/src/index.css",
-			"!**/styles/global.css"
+			"!**/styles/global.css",
+			"!**/.wrangler"
 		]
 	},
 	"formatter": {
