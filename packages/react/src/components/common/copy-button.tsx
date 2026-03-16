@@ -1,7 +1,7 @@
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { Button } from "@rhinolabs/ui";
 import { Check, Copy } from "lucide-react";
 import type React from "react";
+import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 
 interface CopyButtonProps {
 	text: string;

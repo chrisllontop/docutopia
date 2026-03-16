@@ -1,5 +1,5 @@
-import { InnerLine } from "codehike/code";
 import type { AnnotationHandler } from "codehike/code";
+import { InnerLine } from "codehike/code";
 
 export const lineNumbers: AnnotationHandler = {
 	name: "line-numbers",

@@ -1,5 +1,5 @@
-import type { EnhancedOperation, ParameterObject } from "@/core/types";
 import { memo } from "react";
+import type { EnhancedOperation, ParameterObject } from "@/core/types";
 import { EndpointHeader } from "./endpoint-header";
 import { EndpointParams } from "./endpoint-params";
 import { EndpointResponses } from "./endpoint-responses";

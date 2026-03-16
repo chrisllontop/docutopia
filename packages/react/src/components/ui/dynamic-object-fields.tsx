@@ -1,10 +1,10 @@
+import { Button, Separator } from "@rhinolabs/ui";
+import { ChevronRight, Plus, Trash } from "lucide-react";
+import React, { useEffect, useRef, useState } from "react";
 import { ParamField } from "@/components/ui/fields/param-field";
 import { useRequestParams } from "@/contexts";
 import type { SchemaObject } from "@/types/api/openapi";
 import { asSchemaObject } from "@/utils/type-guards";
-import { Button, Separator } from "@rhinolabs/ui";
-import { ChevronRight, Plus, Trash } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
 
 interface DynamicObjectFieldsProps {
 	itemSchema: SchemaObject;

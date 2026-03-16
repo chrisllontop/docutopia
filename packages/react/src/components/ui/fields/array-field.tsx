@@ -1,9 +1,9 @@
-import type { SchemaObject } from "@/types/api/openapi";
-import { mapSchemaToParamField } from "@/utils/fields/map-schema-to-param-field";
-import { asSchemaObject } from "@/utils/type-guards";
 import { Card, Collapsible, Separator } from "@rhinolabs/ui";
 import { ChevronRight } from "lucide-react";
 import { useMemo } from "react";
+import type { SchemaObject } from "@/types/api/openapi";
+import { mapSchemaToParamField } from "@/utils/fields/map-schema-to-param-field";
+import { asSchemaObject } from "@/utils/type-guards";
 import { DynamicFields } from "../dynamic-fields";
 import { DynamicObjectFields } from "../dynamic-object-fields";
 import { ParamField } from "./param-field";
@@ -92,6 +92,7 @@ export const ArrayField: React.FC<ArrayFieldProps> = ({
 			return;
 		}
 
+		// biome-ignore lint/correctness/useHookAtTopLevel: hook is within a stable conditional branch
 		const options = useMemo(() => {
 			if (items && Array.isArray(items.enum)) {
 				return (items.enum ?? []).map(String);

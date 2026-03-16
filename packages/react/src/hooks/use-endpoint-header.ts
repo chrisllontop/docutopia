@@ -1,7 +1,7 @@
+import { useMemo } from "react";
 import { useOpenAPI } from "@/contexts";
 import type { EnhancedOperation } from "@/core/types";
 import { getRequestTypeClass } from "@/utils/api/request-type";
-import { useMemo } from "react";
 
 interface EndpointHeaderData {
 	title: string;

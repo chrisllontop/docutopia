@@ -1,10 +1,10 @@
 "use client";
 
+import type { ReactNode } from "react";
+import { createContext, useContext, useMemo } from "react";
 import type { EnhancedOperation, OpenApiDocument } from "@/core/types";
 import { OpenApiService } from "@/services/openapi-service";
 import { getAvailableAuthTypes } from "@/utils/map-security-schemes";
-import { createContext, useContext, useMemo } from "react";
-import type { ReactNode } from "react";
 import type { OpenAPIContextValue } from "./types";
 
 /**

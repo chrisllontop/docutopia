@@ -187,7 +187,7 @@ export function normalizeExampleResponse(
 
 	// Normalize the root schema
 	const normalizedSchema = normalizeSchema(schema, spec);
-	let schemaToProcess: Record<string, SchemaOrRef> | undefined = undefined;
+	let schemaToProcess: Record<string, SchemaOrRef> | undefined;
 
 	// Extract properties if it's an object
 	if (normalizedSchema.type === "object" && normalizedSchema.properties) {

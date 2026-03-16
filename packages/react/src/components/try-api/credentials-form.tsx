@@ -1,10 +1,10 @@
-import { CopyButton } from "@/components/common/copy-button";
-import type { AuthCredentials } from "@/core/types";
-import { useAuth } from "@/hooks";
 import { Button, Card, Input, Select } from "@rhinolabs/ui";
 import { Eye, EyeOff } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
+import { CopyButton } from "@/components/common/copy-button";
+import type { AuthCredentials } from "@/core/types";
+import { useAuth } from "@/hooks";
 
 export const CredentialsForm: React.FC = () => {
 	const { credentials, updateCredentials } = useAuth();

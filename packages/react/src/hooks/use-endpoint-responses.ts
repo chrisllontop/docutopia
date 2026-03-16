@@ -1,5 +1,5 @@
-import type { EnhancedOperation, ResponseEntry } from "@/core/types";
 import { useMemo } from "react";
+import type { EnhancedOperation, ResponseEntry } from "@/core/types";
 
 interface EndpointResponsesData {
 	responses: ResponseEntry[];

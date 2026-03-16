@@ -1,9 +1,9 @@
-import { useCopyToClipboard } from "@/hooks";
-import { useHighlightedCode } from "@/hooks/use-highlighted-code";
 import { Button, Card } from "@rhinolabs/ui";
 import { Pre } from "codehike/code";
 import { Copy, Terminal } from "lucide-react";
 import type React from "react";
+import { useCopyToClipboard } from "@/hooks";
+import { useHighlightedCode } from "@/hooks/use-highlighted-code";
 
 interface EnhancedCurlDisplayProps {
 	curlCommand: string;

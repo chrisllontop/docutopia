@@ -1,5 +1,5 @@
-import type { ParameterObject } from "@/core/types";
 import { useMemo } from "react";
+import type { ParameterObject } from "@/core/types";
 
 interface EndpointParametersData {
 	pathParams: ParameterObject[];

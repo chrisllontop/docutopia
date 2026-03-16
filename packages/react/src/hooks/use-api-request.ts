@@ -1,6 +1,6 @@
+import { useCallback, useState } from "react";
 import type { RequestConfig, RequestState } from "@/core/types";
 import { ApiClient } from "@/services/api-client";
-import { useCallback, useState } from "react";
 
 export const useApiRequest = (baseUrl = "") => {
 	const [state, setState] = useState<RequestState>({

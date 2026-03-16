@@ -1,9 +1,9 @@
-import { useRequestParams } from "@/contexts";
-import type { ParameterObject, SchemaObject, SchemaOrRef } from "@/core/types";
-import { asSchemaObject } from "@/utils/type-guards";
 import { Button, Collapsible, Separator } from "@rhinolabs/ui";
 import { ChevronRight } from "lucide-react";
 import { Fragment, useState } from "react";
+import { useRequestParams } from "@/contexts";
+import type { ParameterObject, SchemaObject, SchemaOrRef } from "@/core/types";
+import { asSchemaObject } from "@/utils/type-guards";
 import { ParamField } from "./fields";
 
 /**

@@ -4,16 +4,20 @@
 	border-radius: 0.5rem;
 	border: 1px solid var(--feature-color);
 
-	background: linear-gradient(
+	background:
+		linear-gradient(
 			180deg,
 			color-mix(in srgb, var(--feature-color) 5%, transparent),
 			transparent
-		), #0a0a0a;
+		),
+		#0a0a0a;
 
 	box-shadow: 0 4px 24px var(--feature-glow);
 	backdrop-filter: blur(6px);
 
-	transition: box-shadow 0.2s ease, transform 0.2s ease;
+	transition:
+		box-shadow 0.2s ease,
+		transform 0.2s ease;
 }
 
 .feature-card:hover {

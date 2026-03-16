@@ -1,8 +1,8 @@
+import type React from "react";
 import { ResponseTypes } from "@/components/api-docs/api-response";
 import { useOpenAPI } from "@/contexts";
 import type { EnhancedOperation } from "@/core/types";
 import { useEndpointResponses } from "@/hooks/use-endpoint-responses";
-import type React from "react";
 
 interface EndpointResponsesProps {
 	operation: EnhancedOperation;

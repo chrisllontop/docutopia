@@ -1,5 +1,5 @@
-import type { SchemaObject } from "@/core/types";
 import z from "zod";
+import type { SchemaObject } from "@/core/types";
 
 export function fieldToZodSchema(field: SchemaObject, required = false) {
 	if (field.type === "string") {
