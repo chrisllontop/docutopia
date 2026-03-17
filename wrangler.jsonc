@@ -5,7 +5,7 @@
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
 	"assets": {
 		"binding": "ASSETS",
-		"directory": "./apps/docs/dist"
+		"directory": "./apps/docs/dist/client"
 	},
 	"observability": {
 		"enabled": true
