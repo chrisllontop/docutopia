@@ -41,11 +41,9 @@
 
 // Re-export everything from @docutopia/react
 export * from "@docutopia/react";
-
+export type { NextJSAdapterOptions } from "./adapter";
+// Export Next.js adapter (for advanced use cases)
+export { createNextJSAdapter, NextJSAdapter } from "./adapter";
+export type { DocutopiaProps } from "./docutopia";
 // Override Docutopia component with Next.js version
 export { Docutopia } from "./docutopia";
-export type { DocutopiaProps } from "./docutopia";
-
-// Export Next.js adapter (for advanced use cases)
-export { NextJSAdapter, createNextJSAdapter } from "./adapter";
-export type { NextJSAdapterOptions } from "./adapter";

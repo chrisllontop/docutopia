@@ -1,8 +1,8 @@
+import { Badge, Input, Select } from "@rhinolabs/ui";
+import { useState } from "react";
 import { useRequestParams } from "@/contexts";
 import { useFieldValidation } from "@/hooks/useFieldValidation";
 import type { ParameterObject, SchemaObject } from "@/types/api/openapi";
-import { Badge, Input, Select } from "@rhinolabs/ui";
-import { useState } from "react";
 import { FieldErrorPopUp } from "../field-error-popup";
 
 interface StringFieldProps {

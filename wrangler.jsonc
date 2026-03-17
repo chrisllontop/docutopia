@@ -1,11 +1,11 @@
 {
-	"main": "apps/docs/dist/_worker.js/index.js",
+	"main": "apps/docs/dist/server/entry.mjs",
 	"name": "docutopia",
 	"compatibility_date": "2025-12-02",
 	"compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
 	"assets": {
 		"binding": "ASSETS",
-		"directory": "./apps/docs/dist"
+		"directory": "./apps/docs/dist/client"
 	},
 	"observability": {
 		"enabled": true

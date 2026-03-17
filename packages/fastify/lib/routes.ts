@@ -3,7 +3,6 @@ import { createRequire } from "node:module";
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 
 const require = createRequire(import.meta.url);
-
 interface RoutesOptions {
 	prefix: string;
 	specUrl: string;
@@ -14,22 +13,18 @@ interface RoutesOptions {
 	) => unknown;
 	transformSpecificationClone?: boolean;
 }
-
 export async function routes(
 	fastify: FastifyInstance,
 	opts: RoutesOptions,
 ): Promise<void> {
 	let css = "";
 	let js = "";
-
 	try {
 		const cssPath = require.resolve("@docutopia/react/styles");
 		const rhinolabsUiCssPath = require.resolve("@rhinolabs/ui/dist/styles.css");
 		const jsPath = require.resolve("@docutopia/react/browser");
-
 		const docutopiaCss = readFileSync(cssPath, "utf-8");
 		const rhinolabsUiCss = readFileSync(rhinolabsUiCssPath, "utf-8");
-
 		// Combine both CSS files - @rhinolabs/ui first, then @docutopia/react
 		css = `${rhinolabsUiCss}\n${docutopiaCss}`;
 		js = readFileSync(jsPath, "utf-8");
@@ -38,32 +33,28 @@ export async function routes(
 			`Could not read Docutopia assets from @docutopia/react package: ${(error as Error).message}`,
 		);
 	}
-
 	fastify.route({
 		url: "/docutopia.js",
 		method: "GET",
 		schema: {
 			hide: true,
 		},
-		handler: async (request, reply) => {
+		handler: async (_request, reply) => {
 			reply
 				.header("content-type", "application/javascript; charset=utf-8")
 				.header("cache-control", "public, max-age=31536000")
 				.send(js);
 		},
 	});
-
 	// Serve main documentation UI
-	const htmlHandler = async (request: FastifyRequest, reply: FastifyReply) => {
+	const htmlHandler = async (_request: FastifyRequest, reply: FastifyReply) => {
 		const html = generateDocutopiaHTML({
 			css,
 			specUrl: opts.specUrl,
 			basename: opts.prefix,
 		});
-
 		reply.header("content-type", "text/html; charset=utf-8").send(html);
 	};
-
 	// Root route for documentation
 	fastify.route({
 		url: "/",
@@ -73,7 +64,6 @@ export async function routes(
 		},
 		handler: htmlHandler,
 	});
-
 	// Wildcard route to handle all sub-routes (for React Router)
 	// This allows URLs like /docs/get-users to work with BrowserRouter
 	fastify.route({
@@ -84,12 +74,10 @@ export async function routes(
 		},
 		handler: htmlHandler,
 	});
-
 	// Serve OpenAPI spec as JSON
 	const hasTransformSpecificationFn =
 		typeof opts.transformSpecification === "function";
 	const shouldCloneSwaggerObject = opts.transformSpecificationClone ?? true;
-
 	fastify.route({
 		url: "/json",
 		method: "GET",
@@ -104,35 +92,29 @@ export async function routes(
 						"OpenAPI specification not available. Please register @fastify/swagger first.",
 				});
 			}
-
 			let swaggerObject: unknown = fastify.swagger();
-
 			if (hasTransformSpecificationFn) {
 				if (shouldCloneSwaggerObject) {
 					// Deep clone to avoid mutation
 					swaggerObject = JSON.parse(JSON.stringify(swaggerObject));
 				}
-				// biome-ignore lint/style/noNonNullAssertion:
-				swaggerObject = opts.transformSpecification!(
+				swaggerObject = opts.transformSpecification?.(
 					swaggerObject,
 					request,
 					reply,
 				);
 			}
-
 			reply.header("content-type", "application/json; charset=utf-8");
 			return swaggerObject;
 		},
 	});
 }
-
 function generateDocutopiaHTML(options: {
 	css: string;
 	specUrl: string;
 	basename: string;
 }): string {
 	const { css, specUrl, basename } = options;
-
 	return `<!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
@@ -143,17 +125,14 @@ function generateDocutopiaHTML(options: {
 </head>
 <body>
 	<div id="root"></div>
-
 	<!-- Initialize Docutopia -->
 	<script type="module">
 		import { Docutopia, renderDocutopia } from '${basename}/docutopia.js';
-
 		try {
 			const element = document.getElementById('root');
 			if (!element) {
 				throw new Error('Root element not found');
 			}
-
 			// If renderDocutopia function exists, use it
 			if (typeof renderDocutopia === 'function') {
 				renderDocutopia(element, {

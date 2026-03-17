@@ -1,10 +1,10 @@
+import type React from "react";
 import { ArrayField } from "@/components/ui/fields/array-field";
 import { BooleanField } from "@/components/ui/fields/boolean-field";
 import { IntegerField } from "@/components/ui/fields/integer-field";
 import { ObjectField } from "@/components/ui/fields/object-field";
 import { StringField } from "@/components/ui/fields/string-field";
 import type { ParameterObject, SchemaObject } from "@/types/api/openapi";
-import type React from "react";
 
 type FieldComponent = React.FC<{
 	schema: SchemaObject;

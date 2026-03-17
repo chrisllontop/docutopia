@@ -1,9 +1,9 @@
+import { Separator } from "@rhinolabs/ui";
+import type React from "react";
 import { ParamField } from "@/components/ui/fields/param-field";
 import type { SchemaOrRef } from "@/types/api/openapi";
 import { mapSchemaToParamField } from "@/utils/fields/map-schema-to-param-field";
 import { asSchemaObject } from "@/utils/type-guards";
-import { Separator } from "@rhinolabs/ui";
-import type React from "react";
 
 interface PropertiesListProps {
 	mediaType: string;

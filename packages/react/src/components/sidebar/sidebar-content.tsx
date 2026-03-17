@@ -1,6 +1,6 @@
-import type { SidebarCollection } from "@/types/components/sidebar";
 import { Sidebar } from "@rhinolabs/ui";
 import type React from "react";
+import type { SidebarCollection } from "@/types/components/sidebar";
 import { NavMain } from "./nav-main";
 
 interface SidebarContentProps {

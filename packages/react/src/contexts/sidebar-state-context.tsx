@@ -1,5 +1,6 @@
 "use client";
 
+import type { ReactNode } from "react";
 import {
 	createContext,
 	useCallback,
@@ -7,7 +8,6 @@ import {
 	useEffect,
 	useState,
 } from "react";
-import type { ReactNode } from "react";
 
 /**
  * Sidebar state tracking which groups are expanded/collapsed

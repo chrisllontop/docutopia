@@ -41,5 +41,8 @@ public/specs*
 # Bundlers
 .rslib
 
+# Cloudflare
+.wrangler
+
 # specs
 giant-spec.json

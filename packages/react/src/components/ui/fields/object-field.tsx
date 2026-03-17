@@ -1,13 +1,12 @@
+import { Button, Collapsible, Separator } from "@rhinolabs/ui";
+import { ChevronRight } from "lucide-react";
+import React, { useState } from "react";
 import type {
 	ParameterObject,
 	SchemaObject,
 	SchemaOrRef,
 } from "@/types/api/openapi";
 import { asSchemaObject } from "@/utils/type-guards";
-import { Button, Collapsible, Separator } from "@rhinolabs/ui";
-import { ChevronRight } from "lucide-react";
-import { useState } from "react";
-import React from "react";
 import { CombineSchemaObjectField } from "../combine-schema-object-field";
 import { CustomObjectField } from "../custom-object-field";
 import { ParamField } from "./param-field";

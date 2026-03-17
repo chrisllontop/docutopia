@@ -1,10 +1,10 @@
 "use client";
 import "./index.css";
 
-import { OpenApiService } from "@/services";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
+import { OpenApiService } from "@/services";
 import { App } from "./app";
 import {
 	AuthProvider,

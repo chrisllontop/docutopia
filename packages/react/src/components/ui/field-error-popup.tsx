@@ -1,6 +1,6 @@
-import type { Rule } from "@/utils/fields/field-to-schema";
 import { CheckIcon, XIcon } from "lucide-react";
 import type { $ZodIssue } from "zod/v4/core";
+import type { Rule } from "@/utils/fields/field-to-schema";
 
 interface FieldErrorPopUpProps {
 	rules: Rule[];

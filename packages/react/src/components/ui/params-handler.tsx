@@ -1,7 +1,7 @@
-import { ParamField } from "@/components/ui/fields/param-field";
-import type { ParameterObject } from "@/types/api/openapi";
 import { Card, Separator } from "@rhinolabs/ui";
 import React from "react";
+import { ParamField } from "@/components/ui/fields/param-field";
+import type { ParameterObject } from "@/types/api/openapi";
 
 interface ParamsProps {
 	params: ParameterObject[];

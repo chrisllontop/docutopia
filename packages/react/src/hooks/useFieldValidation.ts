@@ -1,7 +1,7 @@
-import type { SchemaObject } from "@/core/types";
-import { fieldToZodSchema } from "@/utils/fields/field-to-schema";
 import { useState } from "react";
 import type { $ZodIssue } from "zod/v4/core";
+import type { SchemaObject } from "@/core/types";
+import { fieldToZodSchema } from "@/utils/fields/field-to-schema";
 
 export const useFieldValidation = (field: SchemaObject, required?: boolean) => {
 	const [error, setError] = useState<$ZodIssue[]>([]);

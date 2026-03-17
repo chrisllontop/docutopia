@@ -1,10 +1,10 @@
 "use client";
 
+import { Badge, Button, Command } from "@rhinolabs/ui";
+import { useEffect, useMemo, useState } from "react";
 import { useRouting } from "@/routing/context";
 import type { SidebarCollection } from "@/types/components/sidebar";
 import { getRequestTypeClass } from "@/utils/api/request-type";
-import { Badge, Button, Command } from "@rhinolabs/ui";
-import { useEffect, useMemo, useState } from "react";
 
 interface SearchBarProps {
 	navItems: SidebarCollection[];

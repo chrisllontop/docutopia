@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { useOpenAPI } from "@/contexts";
 import type {
 	OpenApiDocument,
@@ -10,7 +11,6 @@ import type {
 	SidebarRequestItem,
 } from "@/types/components/sidebar";
 import { slugifyOperation } from "@/utils/slugify-operation";
-import { useMemo } from "react";
 
 interface SidebarData {
 	collections: SidebarCollection[];
@@ -67,7 +67,10 @@ const generateSidebarFromSpec = (
 			if (!existingItem) {
 				group?.push(item);
 			} else {
-				const currentIndex = Number.parseInt(existingItem.url.split("_")[1]);
+				const currentIndex = Number.parseInt(
+					existingItem.url.split("_")[1],
+					10,
+				);
 				const nextIndex = Number.isNaN(currentIndex) ? 1 : currentIndex + 1;
 
 				item.url = `${item.url}_${nextIndex}`;

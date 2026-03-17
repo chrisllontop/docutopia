@@ -1,10 +1,10 @@
+import { useMemo } from "react";
 import type {
 	AuthCredentials,
 	EnhancedOperation,
 	RequestParameters,
 } from "@/core/types";
 import { joinPaths } from "@/utils/url-helpers";
-import { useMemo } from "react";
 
 interface CurlOptions {
 	baseUrl?: string;

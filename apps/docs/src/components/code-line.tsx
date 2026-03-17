@@ -1,5 +1,5 @@
-import { Pre, highlight } from "codehike/code";
 import type { HighlightedCode } from "codehike/code";
+import { highlight, Pre } from "codehike/code";
 import { useEffect, useState } from "react";
 import { CopyButton } from "./copy-button";
 

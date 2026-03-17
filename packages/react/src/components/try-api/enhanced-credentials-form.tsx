@@ -1,9 +1,9 @@
-import type { AuthCredentials } from "@/core/types";
-import { useAuth, useOpenAPI } from "@/hooks";
 import { Button, Card, Input, Select } from "@rhinolabs/ui";
 import { Code, Eye, EyeOff, IdCard, Key, Shield } from "lucide-react";
 import type React from "react";
 import { useEffect, useState } from "react";
+import type { AuthCredentials } from "@/core/types";
+import { useAuth, useOpenAPI } from "@/hooks";
 
 interface AuthTypeConfig {
 	type: AuthCredentials["type"];

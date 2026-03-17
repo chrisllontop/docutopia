@@ -1,12 +1,12 @@
+import { Sidebar } from "@rhinolabs/ui";
+import type React from "react";
+import { useEffect } from "react";
 import { ErrorDisplay } from "@/components/common/error-display";
 import { EndpointDocumentation } from "@/components/endpoint-docs";
 import { TryApiPanel } from "@/components/try-api/try-api-panel";
 import { useRequestParams } from "@/contexts";
 import { useEndpointData } from "@/hooks/use-endpoint-data";
 import { useRouting } from "@/routing/context";
-import { Sidebar } from "@rhinolabs/ui";
-import type React from "react";
-import { useEffect } from "react";
 
 export const DocutopiaPage: React.FC = () => {
 	const routing = useRouting();

@@ -1,8 +1,8 @@
-import { useSidebarData } from "@/hooks/use-sidebar-data";
 import { useWindowSize } from "@rhinolabs/react-hooks";
 import { Sidebar } from "@rhinolabs/ui";
 import type React from "react";
 import { memo } from "react";
+import { useSidebarData } from "@/hooks/use-sidebar-data";
 import { SearchBar } from "../search-bar/search-bar";
 import { SidebarContent } from "./sidebar-content";
 import { SidebarHeader } from "./sidebar-header";
