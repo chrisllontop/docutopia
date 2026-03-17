@@ -6,13 +6,10 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-	output: "server",
+	output: "static",
 	adapter: cloudflare(),
 	vite: {
 		plugins: [tailwindcss()],
-		ssr: {
-			noExternal: ["@docutopia/react"],
-		},
 	},
 	integrations: [react()],
 });
