@@ -52,10 +52,10 @@ export interface DocutopiaProps {
 	 */
 	className?: string;
 	/**
-	 * Custom router basename for nested routing (e.g., "/docs")
+	 * Custom router base path for nested routing (e.g., "/docs")
 	 * Only used with React Router adapter
 	 */
-	basename?: string;
+	basePath?: string;
 	/**
 	 * Routing adapter for framework integration
 	 * Defaults to ReactRouterAdapter (with BrowserRouter)
@@ -85,7 +85,7 @@ function DocutopiaInner({
 	specUrl,
 	baseUrl,
 	className,
-	basename,
+	basePath,
 	adapter = ReactRouterAdapter,
 	currentSlug,
 }: DocutopiaProps) {
@@ -180,7 +180,7 @@ function DocutopiaInner({
 	if (isReactRouter) {
 		return (
 			<div className={className}>
-				<BrowserRouter basename={basename}>{app}</BrowserRouter>
+				<BrowserRouter basename={basePath}>{app}</BrowserRouter>
 			</div>
 		);
 	}
@@ -210,12 +210,12 @@ function DocutopiaInner({
  * ```
  *
  * @example
- * With basename for server integration (e.g., Fastify at /docs):
+ * With basePath for server integration (e.g., Fastify at /docs):
  * ```tsx
  * <Docutopia
  *   specUrl="/docs/json"
  *   baseUrl="http://localhost:3000"
- *   basename="/docs"
+ *   basePath="/docs"
  * />
  * ```
  */
