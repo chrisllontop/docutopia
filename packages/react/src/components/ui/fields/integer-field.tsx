@@ -1,8 +1,8 @@
+import { Input } from "@rhinolabs/ui";
+import { useState } from "react";
 import { useRequestParams } from "@/contexts";
 import { useFieldValidation } from "@/hooks/useFieldValidation";
 import type { SchemaObject } from "@/types/api/openapi";
-import { Input } from "@rhinolabs/ui";
-import { useState } from "react";
 import { FieldErrorPopUp } from "../field-error-popup";
 
 interface IntegerFieldProps {

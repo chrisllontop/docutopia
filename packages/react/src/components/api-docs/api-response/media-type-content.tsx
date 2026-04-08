@@ -1,3 +1,6 @@
+import { Button, Card, Collapsible, Separator } from "@rhinolabs/ui";
+import { MinusIcon, PlusIcon } from "lucide-react";
+import { memo, useState } from "react";
 import type {
 	MediaTypeObject,
 	OpenApiDocument,
@@ -6,9 +9,6 @@ import type {
 } from "@/types/api/openapi";
 import { resolveRef } from "@/utils/api/resolve-ref";
 import { asSchemaObject } from "@/utils/type-guards";
-import { Button, Card, Collapsible, Separator } from "@rhinolabs/ui";
-import { MinusIcon, PlusIcon } from "lucide-react";
-import { memo, useState } from "react";
 import { PropertiesList } from "./properties-list";
 
 interface MediaTypeContentProps {
@@ -86,6 +86,7 @@ export const MediaTypeExamplesContent: React.FC<MediaTypeExamplesContentProps> =
 		if (!mediaObject.examples) {
 			return null;
 		}
+		// biome-ignore lint/correctness/useHookAtTopLevel: hook used in memo component
 		const [openIndex, setOpenIndex] = useState<number | null>(null);
 		const handleToggle = (index: number) => {
 			setOpenIndex((prev) => (prev === index ? null : index));

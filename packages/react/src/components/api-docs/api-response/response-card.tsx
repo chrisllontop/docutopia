@@ -1,11 +1,11 @@
+import { Button, Card, Collapsible } from "@rhinolabs/ui";
+import { ChevronDown, ChevronRight } from "lucide-react";
+import { memo } from "react";
 import type {
 	OpenApiDocument,
 	ResponseEntry,
 	SchemaObject,
 } from "@/types/api/openapi";
-import { Button, Card, Collapsible } from "@rhinolabs/ui";
-import { ChevronDown, ChevronRight } from "lucide-react";
-import { memo } from "react";
 import {
 	MediaTypeContent,
 	MediaTypeExamplesContent,

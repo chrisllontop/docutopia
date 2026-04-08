@@ -1,8 +1,8 @@
-import { useRequestParams } from "@/contexts";
-import type { ParameterObject, SchemaObject } from "@/types/api/openapi";
 import { Select } from "@rhinolabs/ui";
 import type React from "react";
 import { useState } from "react";
+import { useRequestParams } from "@/contexts";
+import type { ParameterObject, SchemaObject } from "@/types/api/openapi";
 
 interface BooleanFieldProps {
 	schema: SchemaObject;

@@ -78,7 +78,7 @@
 
 	/* Override any light backgrounds that might interfere */
 	.bg-gray-100 {
-		background-color: var(--color-muted) !important;
+		background-color: var(--color-muted);
 	}
 
 	/* Ensure text is readable in dark mode */
@@ -106,72 +106,72 @@
 
 	/* Ensure select dropdowns use proper hierarchy */
 	[data-radix-select-content] {
-		background-color: var(--color-input) !important;
-		color: var(--color-foreground) !important;
-		border-color: var(--color-border) !important;
+		background-color: var(--color-input);
+		color: var(--color-foreground);
+		border-color: var(--color-border);
 	}
 
 	/* Ensure command dialog uses proper hierarchy */
 	[data-radix-dialog-content] {
-		background-color: var(--color-card) !important;
-		color: var(--color-foreground) !important;
-		border-color: var(--color-border) !important;
+		background-color: var(--color-card);
+		color: var(--color-foreground);
+		border-color: var(--color-border);
 	}
 
 	.dark {
 		/* HTTP Method badges */
 		.bg-get {
-			color: var(--color-get) !important;
-			border: 1px solid var(--color-get) !important;
-			background-color: transparent !important;
+			color: var(--color-get);
+			border: 1px solid var(--color-get);
+			background-color: transparent;
 		}
 
 		.bg-post {
-			color: var(--color-post) !important;
-			border: 1px solid var(--color-post) !important;
-			background-color: transparent !important;
+			color: var(--color-post);
+			border: 1px solid var(--color-post);
+			background-color: transparent;
 		}
 
 		.bg-put {
-			color: var(--color-put) !important;
-			border: 1px solid var(--color-put) !important;
-			background-color: transparent !important;
+			color: var(--color-put);
+			border: 1px solid var(--color-put);
+			background-color: transparent;
 		}
 
 		.bg-patch {
-			color: var(--color-patch) !important;
-			border: 1px solid var(--color-patch) !important;
-			background-color: transparent !important;
+			color: var(--color-patch);
+			border: 1px solid var(--color-patch);
+			background-color: transparent;
 		}
 
 		.bg-delete {
-			color: var(--color-delete) !important;
-			border: 1px solid var(--color-delete) !important;
-			background-color: transparent !important;
+			color: var(--color-delete);
+			border: 1px solid var(--color-delete);
+			background-color: transparent;
 		}
 
 		.bg-head {
-			color: var(--color-head) !important;
-			border: 1px solid var(--color-head) !important;
-			background-color: transparent !important;
+			color: var(--color-head);
+			border: 1px solid var(--color-head);
+			background-color: transparent;
 		}
 
 		.bg-options {
-			color: var(--color-options) !important;
-			border: 1px solid var(--color-options) !important;
-			background-color: transparent !important;
+			color: var(--color-options);
+			border: 1px solid var(--color-options);
+			background-color: transparent;
 		}
 
 		.bg-connect {
-			color: var(--color-connect) !important;
-			border: 1px solid var(--color-connect) !important;
-			background-color: transparent !important;
+			color: var(--color-connect);
+			border: 1px solid var(--color-connect);
+			background-color: transparent;
 		}
 
 		.bg-trace {
-			color: var(--color-trace) !important;
-			border: 1px solid var(--color-trace) !important;
-			background-color: transparent !important;
+			color: var(--color-trace);
+			border: 1px solid var(--color-trace);
+			background-color: transparent;
 		}
 	}
 }

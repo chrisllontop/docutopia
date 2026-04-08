@@ -1,7 +1,7 @@
-import { useRequestParams } from "@/contexts";
 import { Button } from "@rhinolabs/ui";
 import { Plus } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useRequestParams } from "@/contexts";
 import { StringCollapsible } from "./string-collapsible";
 
 type DynamicFieldsProps = {

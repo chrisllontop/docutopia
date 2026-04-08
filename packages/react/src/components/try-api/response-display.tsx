@@ -1,14 +1,14 @@
+import { Badge, Card, Tabs } from "@rhinolabs/ui";
+import { type AnnotationHandler, InnerLine, Pre } from "codehike/code";
+import { Loader2, XCircle, XIcon } from "lucide-react";
+import type React from "react";
+import { useEffect, useState } from "react";
 import type {
 	ApiResponse,
 	EnhancedOperation,
 	SchemaObject,
 } from "@/core/types";
 import { useHighlightedCode } from "@/hooks/use-highlighted-code";
-import { Badge, Card, Tabs } from "@rhinolabs/ui";
-import { type AnnotationHandler, InnerLine, Pre } from "codehike/code";
-import { Loader2, XCircle, XIcon } from "lucide-react";
-import type React from "react";
-import { useEffect, useState } from "react";
 
 export const lineNumbers: AnnotationHandler = {
 	name: "line-numbers",
@@ -40,7 +40,10 @@ interface ResponseDisplayProps {
 function ResponseCardTitle({
 	children,
 	title,
-}: { children: React.ReactNode; title: string }) {
+}: {
+	children: React.ReactNode;
+	title: string;
+}) {
 	return (
 		<div className="flex gap-3 items-center">
 			{children}
@@ -75,7 +78,7 @@ export const ResponseDisplay: React.FC<ResponseDisplayProps> = ({
 	const highlightedExample = useHighlightedCode("json", exampleResponse);
 
 	const getStatusColor = (status: string) => {
-		const statusNum = Number.parseInt(status);
+		const statusNum = Number.parseInt(status, 10);
 		if (statusNum >= 200 && statusNum < 300)
 			return "border-green-500 text-green-500";
 		if (statusNum >= 300 && statusNum < 400)

@@ -1,9 +1,9 @@
 "use client";
 
+import { Sidebar } from "@rhinolabs/ui";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { DocutopiaPage } from "@/pages/docutopia.page";
 import { useRouting } from "@/routing/context";
-import { Sidebar } from "@rhinolabs/ui";
 
 /**
  * Main App component

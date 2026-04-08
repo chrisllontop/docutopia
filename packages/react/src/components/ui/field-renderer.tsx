@@ -1,6 +1,6 @@
+import type React from "react";
 import type { ParameterObject } from "@/types/api/openapi";
 import { getFieldComponent } from "@/utils/fields/field-registry";
-import type React from "react";
 import UnsupportedField from "./fields/unsupported-field";
 
 interface RenderFieldProps {

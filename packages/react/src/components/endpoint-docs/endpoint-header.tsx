@@ -1,7 +1,7 @@
-import type { EnhancedOperation } from "@/core/types";
-import { useEndpointHeader } from "@/hooks/use-endpoint-header";
 import { Badge } from "@rhinolabs/ui";
 import type React from "react";
+import type { EnhancedOperation } from "@/core/types";
+import { useEndpointHeader } from "@/hooks/use-endpoint-header";
 
 interface EndpointHeaderProps {
 	operation: EnhancedOperation;

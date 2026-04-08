@@ -1,6 +1,6 @@
+import { useMemo } from "react";
 import { useOpenAPI } from "@/contexts";
 import { classifyParameters, getBodyParams } from "@/utils/api/api-helpers";
-import { useMemo } from "react";
 
 export const useEndpointData = (slug?: string) => {
 	const { spec, getOperationBySlug } = useOpenAPI();

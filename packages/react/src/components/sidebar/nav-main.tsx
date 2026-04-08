@@ -1,18 +1,13 @@
 "use client";
 
+import { Badge, Collapsible, Sidebar } from "@rhinolabs/ui";
+import { ChevronRight } from "lucide-react";
 import { useSidebarState } from "@/contexts";
 import { useRouting } from "@/routing/context";
 import type { SidebarCollection } from "@/types/components/sidebar";
 import { getRequestTypeClass } from "@/utils/api/request-type";
-import { ChevronRight } from "lucide-react";
 
-import { Badge, Collapsible, Sidebar } from "@rhinolabs/ui";
-
-export function NavMain({
-	items,
-}: {
-	items: SidebarCollection[];
-}) {
+export function NavMain({ items }: { items: SidebarCollection[] }) {
 	const { Link, usePathname } = useRouting();
 	const { expandedGroups, toggleGroup } = useSidebarState();
 	const pathname = usePathname();

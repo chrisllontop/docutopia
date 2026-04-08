@@ -1,8 +1,8 @@
-import type { ParameterObject, SchemaObject } from "@/core/types";
-import { useRequestParams } from "@/index";
 import { Button, Input } from "@rhinolabs/ui";
 import { Plus, Trash } from "lucide-react";
 import { useState } from "react";
+import type { ParameterObject, SchemaObject } from "@/core/types";
+import { useRequestParams } from "@/index";
 
 interface CustomObjectFieldProps {
 	bodyPath: (string | number)[];

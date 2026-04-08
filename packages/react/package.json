@@ -30,8 +30,12 @@
 			"require": "./dist/index.css"
 		}
 	},
-	"sideEffects": ["*.css"],
-	"files": ["dist/**/*"],
+	"sideEffects": [
+		"*.css"
+	],
+	"files": [
+		"dist/**/*"
+	],
 	"keywords": [
 		"openapi",
 		"swagger",
@@ -53,30 +57,30 @@
 	},
 	"dependencies": {
 		"@rhinolabs/react-hooks": "^1.0.3",
-		"@rhinolabs/ui": "^1.1.0",
+		"@rhinolabs/ui": "^1.2.1",
 		"@sindresorhus/slugify": "^3.0.0",
 		"codehike": "^1.0.7",
-		"lucide-react": "^0.474.0",
+		"lucide-react": "^0.577.0",
 		"next-themes": "^0.4.6",
 		"tailwindcss-animate": "^1.0.7",
-		"zod": "^4.1.12"
+		"zod": "^4.3.6"
 	},
 	"devDependencies": {
-		"@tailwindcss/postcss": "^4.0.3",
+		"@tailwindcss/postcss": "^4.2.1",
 		"@types/js-yaml": "^4.0.9",
-		"@types/node": "^22.10.3",
-		"@types/react": "^19.0.0",
-		"@types/react-dom": "^19.0.0",
-		"@vitejs/plugin-react": "^5.0.4",
+		"@types/node": "^25.5.0",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.1",
 		"js-yaml": "^4.1.1",
-		"postcss": "^8.4.49",
+		"postcss": "^8.5.8",
 		"postcss-cli": "^11.0.1",
-		"react-router-dom": "^6.28.0",
-		"tailwind-merge": "^3.0.1",
-		"tailwindcss": "^4.0.3",
+		"react-router-dom": "^7.13.1",
+		"tailwind-merge": "^3.5.0",
+		"tailwindcss": "^4.2.1",
 		"tsc-alias": "^1.8.16",
-		"typescript": "^5.7.2",
-		"vite": "^7.1.11",
+		"typescript": "^5.9.3",
+		"vite": "^8.0.0",
 		"vite-plugin-dts": "^4.5.4"
 	},
 	"peerDependencies": {

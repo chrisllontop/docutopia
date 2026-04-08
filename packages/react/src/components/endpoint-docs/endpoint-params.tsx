@@ -1,9 +1,9 @@
+import type React from "react";
 import { BodyParams } from "@/components/api-docs/body-params";
 import { PathParams } from "@/components/api-docs/path-params";
 import { QueryParams } from "@/components/api-docs/query-params";
 import type { ParameterObject } from "@/core/types";
 import { useEndpointParameter } from "@/hooks/use-endpoint-parameter";
-import type React from "react";
 
 interface EndpointParametersProps {
 	parameters: { pathParams: ParameterObject[]; queryParams: ParameterObject[] };

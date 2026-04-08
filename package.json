@@ -18,14 +18,15 @@
 	],
 	"scripts": {
 		"build": "pnpm -r build",
+		"build:docs": "pnpm --filter docs build",
 		"dev": "pnpm -r --parallel dev",
 		"lint": "biome check .",
 		"lint:fix": "biome check . --fix --unsafe"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@types/node": "^22.10.3",
-		"tsx": "^4.19.2"
+		"@biomejs/biome": "2.4.7",
+		"@types/node": "^25.5.0",
+		"tsx": "^4.21.0"
 	},
 	"license": "MIT",
 	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"

@@ -11,10 +11,10 @@ import yaml from "js-yaml";
 export function parseSpecFile(content: string): unknown {
 	try {
 		return JSON.parse(content);
-	} catch (jsonError) {
+	} catch (_jsonError) {
 		try {
 			return yaml.load(content);
-		} catch (yamlError) {
+		} catch (_yamlError) {
 			throw new Error("The file is not a valid JSON or YAML document.");
 		}
 	}

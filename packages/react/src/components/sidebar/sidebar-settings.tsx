@@ -4,7 +4,9 @@ import { useTheme } from "next-themes";
 
 export const SidebarSettings = ({
 	children,
-}: { children: React.ReactNode }) => {
+}: {
+	children: React.ReactNode;
+}) => {
 	const { setTheme, theme, themes } = useTheme();
 
 	return (

@@ -1,6 +1,6 @@
-import { useRequestParams } from "@/contexts";
 import { Button, Input, Select } from "@rhinolabs/ui";
 import { Trash } from "lucide-react";
+import { useRequestParams } from "@/contexts";
 
 type StringCollapsibleProps = {
 	id: number;
